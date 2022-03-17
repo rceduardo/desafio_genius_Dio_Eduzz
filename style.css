@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    background-color: rgb(206, 206, 206) ;
+}
+
+.main-game {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genius {
+    position: absolute;
+    display: grid;
+    grid-template-areas: 'verde vermelho' 
+    'amarelo azul';
+    grid-gap: 15px;
+    border: 25px solid #000000;
+    background-color: #000000;
+    border-radius: 100%;
+    width: 700px;
+    height: 700px;
+}
+
+.texto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    margin-bottom: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: #e9e9e9;
+    border: 30px solid #000000;
+}
+
+.blue {
+    grid-area: azul;
+    background-color: rgb(41, 41, 255);
+    border-bottom-right-radius: 100%;
+}
+.red {
+    grid-area: vermelho;
+    background-color: rgb(255, 27, 27);
+    border-top-right-radius: 100%;
+}
+.yellow {
+    grid-area: amarelo;
+    background-color: rgb(255, 208, 0);
+    border-bottom-left-radius: 100%;
+}
+.green {
+    grid-area: verde;
+    background-color: rgb(21, 255, 0);
+    border-top-left-radius: 100%;
+}
+
+/*Quando a cor for selecionada para exibir, terá uma opacidade mais leve para diferenciar*/
+.selected {
+    opacity: 0.4;
+}
